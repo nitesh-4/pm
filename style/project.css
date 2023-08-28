@@ -1,0 +1,169 @@
+body {
+    
+    font-family: Arial, sans-serif;
+    background-image: url('../img/form.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120vh;
+}
+
+
+.navbar {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    display: flex; /* Make the navigation links flex */
+    gap: 30px; /* Add spacing between links */
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #bbb;
+}
+.login-container {
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #747070c5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(110, 108, 108, 0.5);
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #444;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.form-container label {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.form-container button {
+    padding: 10px;
+    background-color: #666;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #555;
+}
+
+.add-task-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.task-form {
+    display: none;
+}
+
+
+
+.task {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+    background-color: #747070c5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(110, 108, 108, 0.5);
+}
+
+.task input[type="text"],
+.task textarea,
+.task select {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #444;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.task input[type="text"]::placeholder,
+.task textarea::placeholder {
+    color: #bbb;
+}
+
+.task select {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+
+
+
+
+

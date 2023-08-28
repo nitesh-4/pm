@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/home.css">
+    <title>Project Tracker</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Motion</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+            <li><a href="index.html">Log In</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Streamline Your Projects</h1>
+            <p>Manage and track your projects efficiently with our user-friendly project management tool.</p>
+            <a class="cta-button" href="register.html">Get Started</a>
+        </div>
+    </header>
+    <section class="features">
+        <h2>Key Features</h2>
+        <div class="featurer">
+            <h3>Task Management</h3>
+            <p>Break down your projects into tasks and keep track of progress for each task. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Veritatis tempora laborum vel saepe odit quae vitae animi facilis ad
+                asperiores soluta illo maiores vero deleniti reprehenderit quas ipsam numquam, voluptatum maxime,
+                laudantium aspernatur? Rem illum quo dolores. Hic expedita, suscipit similique perferendis, nesciunt
+                rerum nam odit nisi asperiores dolores laudantium dolorem voluptatum natus exercitationem, officiis
+                placeat?</p>
+        </div>
+        <div class="featurer">
+            <h3>Real-time Updates</h3>
+            <p>Stay informed with real-time updates on project status, milestones, and deadlines. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. A soluta numquam aut omnis sapiente quas laborum nulla corporis
+                obcaecati explicabo suscipit dolore ipsam aliquam voluptates ullam ratione, vitae unde eaque at.
+                Voluptate, eos modi. Soluta, molestias distinctio! Dolores aliquam soluta consequuntur odio provident,
+                repellendus distinctio officia rerum similique necessitatibus velit facilis quaerat sed optio eveniet
+                tenetur.</p>
+        </div>
+        <div class="featurer">
+            <h3>Team Collaboration</h3>
+            <p>Collaborate seamlessly with your team members, assign tasks, and communicate effectively.</p>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>&copy; 2023 Project Tracker. All rights reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 2000,
+            delay: 50,
+            reset: true
+        });
+
+        // Applying the effect to the hero section
+        sr.reveal('.hero-content');
+
+        // Applying the effect to each featurer section
+        sr.reveal('.featurer');
+
+        // Applying the effect to the footer section
+        sr.reveal('.footer');
+    </script>
+
+
+</body>
+
+</html>

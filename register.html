@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/register.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="#">Signup</a></li>
+        </ul> -->
+    </nav>
+    
+    <div class="container">
+        <div class="login-container">
+            <div class="signup-section">
+                <h1>Sign Up</h1>
+                <form action="php/register.php" method="POST">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <label for="role">Role:</label>
+                    <select id="role" name="role" onchange="handleRoleChange(this)">
+                        <option value="manager">Manager</option>
+                        <option value="member">Member</option>
+                    </select>
+                    <div id="manager-dropdown" style="display:none;">
+                        <label for="manager">Choose Manager:</label>
+                        <select id="manager" name="manager"></select>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        <div class="login-link">
+            <p>Already have an account? <a href="index.html">Log in</a></p>
+        </div>
+    </div>
+    <script>
+        async function fetchManagers() {
+            const response = await fetch("php/get_managers.php");
+            const managers = await response.json();
+            return managers;
+        }
+
+        function handleRoleChange(element) {
+            if (element.value === 'member') {
+                fetchManagers().then(managers => {
+                    const dropdown = document.getElementById("manager-dropdown");
+                    const select = document.getElementById("manager");
+                    select.innerHTML = ''; // Clear the options
+                    managers.forEach(manager => {
+                        const option = document.createElement('option');
+                        option.value = manager.UserID;
+                        option.text = manager.Name;
+                        select.appendChild(option);
+                    });
+                    dropdown.style.display = 'block';
+                });
+            } else {
+                document.getElementById("manager-dropdown").style.display = 'none';
+            }
+        }
+
+        //manager names disaplay kardo when user choses role as member
+        window.onload = function() {
+            if (document.getElementById('role').value === 'member') {
+                handleRoleChange(document.getElementById('role'));
+            }
+        }
+    </script>
+</body>
+
+</html>

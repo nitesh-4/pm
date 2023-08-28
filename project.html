@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/project.css">
+    <title>Create Project</title>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Motion</div>
+        <ul class="nav-links">
+            <li><a href="php/profile.php">Profile</a></li>
+            <li><a href="project.html">Create Projects</a></li>
+            <li><a href="test.php">Task Details</a></li>
+            <li><a href="php/logout.php">Log Out</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="login-container">
+            <div class="form-container">
+                <h1>Create Project</h1>
+                <!-- onsubmit="submitProject(event)" -->
+                <form method="POST" id="project-form" action="php/create_project.php">
+                    <input type="text" name="project_name" placeholder="Project Name" required>
+                    <textarea name="description" placeholder="Description" rows="4" required></textarea>
+                    <input type="text" name="status" placeholder="STATUS" required>
+                    <br>
+                    <button type="submit">Create Project</button>
+                </form>
+                <form action="php/lol.php" method="POST">
+
+
+                    <button id="addTaskButton" class="add-task-button">Add Task</button>
+                    <div id="tasks-container"></div>
+                    <button type="submit" class="submit-tasks-button">Submit Tasks</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/project.js"></script>
+</body>
+
+</html>

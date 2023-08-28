@@ -1,0 +1,170 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.default-profile-picture {
+    background-image: url('../img/profile.png');
+    width: 200px; /* Set the width */
+    height: 200px; /* Set the height */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: inline-block; /* This makes it behave like an inline image */
+  }
+
+/* Basic styling for body */
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    background-image: url('../img/form.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    display: flex; /* Make the navigation links flex */
+    gap: 30px; /* Add spacing between links */
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #bbb;
+}
+
+/* Profile section styling */
+.profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+}
+
+/* User details section styling */
+.User-details {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.User-details h2, .User-details p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Projects overview section styling */
+.projects-overview {
+    margin-top: 20px;
+    background-color: #d3d7db;
+    color: #4c4949;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* width: fit-content; */
+}
+
+.projects-overview .project {
+    background-color: #d3d7db;
+    margin-bottom: 15px;
+}
+
+.projects-overview h3 {
+    background-color: #d3d7db;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Comment section styling */
+form {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #111;
+    color: #fff;
+    position: absolute; /* Position it at the absolute bottom */
+    width: 100%; /* Make it span the full width of the page */
+    left: 0; /* Align it to the left */
+    bottom: 0; /* Stick it to the bottom */
+}
+
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}

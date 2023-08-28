@@ -1,0 +1,135 @@
+body {
+    
+    font-family: Arial, sans-serif;
+    background-image: url('../img/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #0f0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: #050505;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #bbb;
+}
+
+.container {
+    text-align: center;
+}
+
+.login-container {
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.login-section,
+.signup-section {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent white */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+
+.signup-section form {
+    color: #000;
+    margin-top: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 3px;
+    color: #000;
+}
+
+button {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 3px;
+    color: #050404;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Take full width */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.login-link,
+.signup-link {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.login-link a,p
+.signup-link a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.login-link a:hover,
+.signup-link a:hover {
+    color: #bbb;
+}
